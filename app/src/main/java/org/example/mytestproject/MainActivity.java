@@ -58,7 +58,7 @@ public class MainActivity extends ActionBarActivity {
                 }
 
                 // Let the user know what they're calling
-                Toast.makeText(getBaseContext(),message,Toast.LENGTH_LONG);
+                Toast.makeText(getBaseContext(),message,Toast.LENGTH_LONG).show();
 
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
                     callIntent.setData(Uri.parse(phoneNo));
