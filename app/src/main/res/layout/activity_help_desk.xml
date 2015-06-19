@@ -14,44 +14,75 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/editTextName"
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp" />
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="@string/contact_name_hint" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/editText"
+        android:id="@+id/editTextEmail"
+        android:layout_below="@+id/editTextName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="29dp" />
+        android:layout_marginTop="15dp"
+        android:layout_alignRight="@+id/editTextName"
+        android:layout_alignEnd="@+id/editTextName"
+        android:hint="@string/contact_email_hint" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/editText3"
-        android:layout_below="@+id/editText2"
+        android:id="@+id/editTextPhone"
+        android:layout_below="@+id/editTextEmail"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="33dp" />
+        android:layout_marginTop="15dp"
+        android:layout_alignRight="@+id/editTextEmail"
+        android:layout_alignEnd="@+id/editTextEmail"
+        android:hint="@string/contact_phone_hint" />
+
+    <TextView android:text="@string/select_nature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/labelNature"
+        android:layout_alignTop="@+id/spinnerNature"
+        android:layout_alignLeft="@+id/editTextPhone"
+        android:layout_alignStart="@+id/editTextPhone"
+        android:layout_above="@+id/editTextIssue" />
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:id="@+id/spinnerNature"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/editTextPhone"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/labelNature"
+        android:layout_toEndOf="@+id/labelNature" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/editText4"
-        android:layout_marginTop="36dp"
-        android:layout_below="@+id/editText3"
+        android:layout_marginTop="15dp"
+        android:id="@+id/editTextIssue"
+        android:hint="@string/contact_issue_hint"
+        android:layout_below="@+id/spinnerNature"
+        android:layout_alignRight="@+id/spinnerNature"
+        android:layout_alignEnd="@+id/spinnerNature"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -60,8 +91,7 @@
         android:layout_height="wrap_content"
         android:text="@string/button_send"
         android:id="@+id/button_send"
-        android:layout_below="@+id/editText4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="47dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

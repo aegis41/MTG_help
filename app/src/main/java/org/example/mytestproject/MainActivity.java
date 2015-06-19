@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
 import java.util.Calendar;
 
 
@@ -38,6 +40,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 String phoneNo = "tel:12606330053";
+                String message = "Calling After Hours: 260.633.0053";
 
                 // get a calendar object
                 Calendar c = Calendar.getInstance();
@@ -50,8 +53,12 @@ public class MainActivity extends ActionBarActivity {
                     // if the hour is >=8 && <=17
                     if (hour >= 8 && hour <= 17) {
                         phoneNo = "tel:12604714316";
+                        message = "Calling Office: 260.471.4316";
                     }
                 }
+
+                // Let the user know what they're calling
+                Toast.makeText(getBaseContext(),message,Toast.LENGTH_LONG);
 
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
                     callIntent.setData(Uri.parse(phoneNo));
