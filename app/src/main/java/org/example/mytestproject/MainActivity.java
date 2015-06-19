@@ -46,12 +46,14 @@ public class MainActivity extends ActionBarActivity {
                 Calendar c = Calendar.getInstance();
                 // grab the hour of day (24 hour format) from the calendar
                 int hour = c.get(Calendar.HOUR_OF_DAY);
+
                 // grab the day of the week from the calendar
                 int day = c.get(Calendar.DAY_OF_WEEK);
+
                 // if the day is not Saturday or Sunday
                 if (day != 1 && day != 7) {
-                    // if the hour is >=8 && <=17
-                    if (hour >= 8 && hour <= 17) {
+                    // if the hour is >=8 && < 17
+                    if (hour >= 8 && hour < 17) {
                         phoneNo = "tel:12604714316";
                         message = "Calling Office: 260.471.4316";
                     }
