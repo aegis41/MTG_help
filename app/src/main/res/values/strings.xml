@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MTG Get Help</string>
+
+    <string name="hello_world">Marathon Technology Group</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_call">CALL MARATHON</string>
+    <string name="button_helpdesk">CONTACT HELPDESK</string>
+    <string name="title_activity_help_desk">Contact Help Desk</string>
+    <string name="button_send">Send to HelpDesk</string>
+</resources>
